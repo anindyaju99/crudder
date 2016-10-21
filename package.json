@@ -2,12 +2,16 @@
   "name": "crudder",
   "version": "0.0.1",
   "description": "Generic CRUD library.",
-  "main": "src/index.js",
+  "main": "src/crudder.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anindya Chakraborty<anindyaju99@gmail.com>",
-  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anindyaju99/crudder.git"
+  },
+  "license": "Apache-2.0",
   "dependencies": {
     "mongodb": "^2.2.10"
   }
