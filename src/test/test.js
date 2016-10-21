@@ -2,9 +2,9 @@
 // it can either take a REST form or a native complex query form
 
 (function() {
-    var Model = require('../model');
-    var DefaultModel = require('../models/mongo_model');
-    var Crudder = require('../crudder');
+    var Crudder = require('../index');
+    var Model = Crudder.Model;
+    var DefaultModel = Crudder.Models.Mongo;
     
     var defaultModel = new DefaultModel('mongodb://localhost:27017/test');
     defaultModel.connect(test);
@@ -15,7 +15,7 @@
             return;
         }
         var model = new Model(defaultModel);
-        var crudder = new Crudder(null, model);
+        var crudder = Crudder.create(model);
 
         var qs = {
             'insert': {
